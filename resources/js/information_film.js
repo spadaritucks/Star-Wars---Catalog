@@ -115,6 +115,7 @@ function RenderInformationFilm(films, characters, filmsCharacters, planets) {
             // Encontra o personagem correspondente ao botão clicado
             const characterFilm = charactersFilms[index];
             const character = characters.find(character => character.id == characterFilm.character_id);
+            const planet = planets.find(planet => planet.id == character.homeworld_id);
             
             // Seleciona o título e o corpo do modal
             const modalTitle = document.querySelector('.modal-title');
@@ -132,7 +133,7 @@ function RenderInformationFilm(films, characters, filmsCharacters, planets) {
             <p class="character-height"><strong>Eye Color: </strong>${character.eye_color}</p>
             <p class="character-birth-year"><strong>Birth Year: </strong>${character.birth_year}</p>
             <p class="character-gender"><strong>Gender: </strong>${character.gender}</p>
-            <p class="character-planet"><strong>Origin Planet: </strong>${character.homeworld}</p>
+            <p class="character-planet"><strong>Origin Planet: </strong>${planet.name}</p>
         </div>
         `;
         });

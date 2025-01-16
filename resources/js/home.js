@@ -45,7 +45,7 @@ function renderFilms(films) {
         filmCards.forEach((filmCard, index) => {
             filmCard.addEventListener('click', () => {
                 // Redireciona para a página de informações do filme ao clicar
-                window.location.href = `http://localhost/star-wars-teste-l5-networks/information_film?id=${data[index].id}`
+                window.location.href = `http://localhost/star-wars-teste-l5-networks/information_film?id=${films[index].id}`
             })
         })
     });
