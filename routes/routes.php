@@ -4,8 +4,8 @@
 $routes = [
 
     //Rotas para renderizar o front-end
-    '/' => 'RenderViewController@Home',
-    '/information_film' => 'RenderViewController@InformationFilm',
+    '/' => 'RenderViewController@Home', // Renderiza a Pagina Home (home.php)
+    '/information_film' => 'RenderViewController@InformationFilm', // Renderiza a Pagina Information Film (information_film.php)
 
     //Rotas/Endpoint para efetuar requisições para a API de Star Wars
 
