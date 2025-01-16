@@ -10,9 +10,9 @@ function fetchFilms() {
             // Converte a resposta em JSON
             return response.json();
         })
-        .then(data => {
+        .then(films => {
             // Chama a função para renderizar os filmes
-            renderFilms(data);
+            renderFilms(films);
         })
         .catch(error => {
             // Loga o erro se houver um problema com a requisição Fetch
@@ -21,11 +21,14 @@ function fetchFilms() {
 }
 
 // Função responsável por renderizar os dados dos filmes
-function renderFilms(data) {
+function renderFilms(films) {
+    // Ordena os filmes por data de lançamento
+    films.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
+    
     // Seleciona o container para os filmes
     const filmsList = document.querySelector('.films-grid-container');
     // Itera sobre os dados dos filmes
-    data.forEach(film => {
+    films.forEach(film => {
         // Cria o HTML para o cartão do filme
         const filmCard = `
             <div class="film-card" key={${film.id}} >
