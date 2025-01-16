@@ -1,0 +1,14 @@
+.nav-bar{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    height: 90px;
+    width: 100%;
+    padding: 0 5vw;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
