@@ -5,6 +5,8 @@ require_once __DIR__."/routes/routes.php";
 //Arquivo da configuração das Rotas(Core).
 require_once __DIR__."/core/Core.php";
 
+echo 'teste';
+
 // Registra uma função de autoload para carregar automaticamente classes.
 spl_autoload_register(function($file) {
     // Verifica se o arquivo existe na pasta de configurações.
